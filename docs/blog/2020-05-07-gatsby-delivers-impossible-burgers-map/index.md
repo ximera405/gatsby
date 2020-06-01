@@ -21,11 +21,11 @@ This meant that users had to scan a long and ever-growing list of retailers and 
 
 "Our product would be in certain places, and people wouldn't know it was there," explains Ashley Geo, Head of Brand Marketing Communications for Impossible Foods. Alternatively, she adds, "It wouldn't be in other places, but people would guess that it was there" - only to leave empty-handed and disappointed.
 
-![](https://lh5.googleusercontent.com/UpLDOJ5IvE0tDhK9qqDSa6qbr9gWdM-wPRTZkI0P6XBDBI6gvKZk33qvcUVH88rFC_Ylh8GxTgnpvGZDPPuRMADalLJygiOzmlEY6SyawoFR3AH0BkhhLRSLwrB7aRMZXrCwkdJ6)
+![Original static list of Impossible Burger retail locations](original_list.gif)
 
 Initially the team only had one person to oversee the website. They handled requests from all over the company --- recruiting, sales, other parts of marketing --- for adding new information to the website. Any actual site updates for design, copy or code were handled by a contractor. This required significant turnaround time, so updates often accumulated in a backlog.
 
-Geo had been thinking about a website redesign for a while anyway. The store locator problem was the final straw. As a result, her team decided to create a new website -- ImpossibleFoods.com 2.0 -- that would be easy to update, scale to the needs of the company, and provide users with a key experience lacking in the old site: easily finding the nearest Impossible Burger. ![](https://lh4.googleusercontent.com/6FbuzxrHTT48CwKDjBpCvMXpqdna_ObN-xMOXgARbVUovb8PZsKxca2v2u0_NBEAJykno7lRMzXju_Xg9-TFtjFJ5tX3cCMzgxlAJ80OGn4Sbbhlh5Qy8PEe6Z3OQ62r0yM7CHjk)
+Geo had been thinking about a website redesign for a while anyway. The store locator problem was the final straw. As a result, her team decided to create a new website -- ImpossibleFoods.com 2.0 -- that would be easy to update, scale to the needs of the company, and provide users with a key experience lacking in the old site: easily finding the nearest Impossible Burger. ![Impossible Burger web page reading Find Me Bite Me](find_store_image.png)
 
 ## A New Store Locator: The Discovery Phase
 
@@ -45,13 +45,13 @@ That meant building a rich application, with a whole host of technologies, i.e.,
 
 ## A New Content Workflow
 
-The content management strategy is particularly interesting. Overall it's a great demonstration of the [content mesh](https://www.gatsbyjs.org/blog/2018-10-04-journey-to-the-content-mesh/) - a modular approach to constructing websites using best-fit services rather than a monolithic, one-size-fits-none CMS solution. So while Impossible Foods website content is stored in and managed from Contentful, product location data is stored and managed via Airtable's spreadsheet/database hybrid. This simplify workflow for Impossible customer service representatives (CSRs) maintaining the locator app, while enabling the marketing team to easily create and update other content.
+The content management strategy is particularly interesting. Overall it's a great demonstration of the [content mesh](/blog/2018-10-04-journey-to-the-content-mesh/) - a modular approach to constructing websites using best-fit services rather than a monolithic, one-size-fits-none CMS solution. So while Impossible Foods website content is stored in and managed from Contentful, product location data is stored and managed via Airtable's spreadsheet/database hybrid. This simplify workflow for Impossible customer service representatives (CSRs) maintaining the locator app, while enabling the marketing team to easily create and update other content.
 
 "Content-wise, a store locator is very simple," says CMS guru Deane Barker, the author of the O'Reilly guide to content management. "It's tabular data, which means it can be easily managed via a spreadsheet through rows and columns. To manage the store locator, you often have a different group of people than the marketing editorial team. So, it needs to be a simple interface. You don't want to train them on a larger CMS. They just have to maintain the store locator."
 
 The store locator is a use-case, Barker concludes, that calls for more "simple and direct content management."
 
-That squares with Fonnegra and Impossible's experience. The Impossible Foods' customer service representatives use Airtable for a wide variety of operational tasks, including tracking new launches of the Impossible Burger. And, of course, for the store locator, tracking information for all restaurants selling Impossible products. Airtable is the center of the CSRs workflow, and the [native integration with Gatsby](https://www.gatsbyjs.org/packages/gatsby-source-airtable/?=gatsby-source) allows them to work in the system they're used to---while enjoying the blazing fast mechanics of a modern website working smoothly in the background.
+That squares with Fonnegra and Impossible's experience. The Impossible Foods' customer service representatives use Airtable for a wide variety of operational tasks, including tracking new launches of the Impossible Burger. And, of course, for the store locator, tracking information for all restaurants selling Impossible products. Airtable is the center of the CSRs workflow, and the [native integration with Gatsby](/packages/gatsby-source-airtable/?=gatsby-source) allows them to work in the system they're used to---while enjoying the blazing fast mechanics of a modern website working smoothly in the background.
 
 As a result, Impossible Foods website content creators and CSRs get best fit tools that are comfortable to use, while end-users get information that is always up to date and relevant.
 
@@ -59,13 +59,13 @@ As a result, Impossible Foods website content creators and CSRs get best fit too
 
 The new site provides more than just up to date data, though: users also get a dynamic, interactive experience with store locator and mapping features.
 
-![](https://lh5.googleusercontent.com/sditmdXrjz3_K2qioiKKoIiACnfM8kv_Pa2trN0F6UAmqycMxe3HJ1loxUr96GVl5JdOEET25LQ9ghxjdoFQTF9qC_G4wCtjaldmhlx2dFGG6hsDakWD3k5940kgmt_EKIAx50LQ)
+![animation of finding an Impossible Burger location from interactive map of United States](3_improved_experience.gif)
 
 The new store locator combines natural language searches, geolocation filtering, and an interactive map feature to help the end-user find the closest location where they can get the Impossible Burger.
 
 The interactive map feature now allows customers to simply enter their location information to find nearby Impossible Burger purveyors. This reduces the original five or six step process, including tedious scanning and off-site searching on Google Maps, to a single step.
 
-![](https://lh4.googleusercontent.com/Z6HH9JaYBdasJ76Oh4jRkDgx0OGhhNHIJF7FhdeqCrNuoq-69TDudUvGpNzOENbbFO2sutj2UJPjQe4GdKJOCmeh38tqJrUITA6DePK3vwDHknWZwt6eMMZ8MO1X15AXZlIr3dl-)
+![Interactive map for finding Impossible Burger retail outlets](4_new_map.png)
 
 And because their website was on Gatsby, the user experience was always blazing fast.
 
@@ -87,7 +87,7 @@ Both the store locator app and the overall site itself saw bounce rate reduction
 
 - Partnerships that were widely covered by media and rocketed Impossible Foods' brand outreach into millions of households across the US.
 
-![](https://lh4.googleusercontent.com/YPbAKWGFoAtsLCrngGZtoPKspyD2jzfLAMt9bfZBWTYdBdyu6xWRubDqOncOyjIgl71HQbq-Q9wdI1qCw1LV8bhpg0pLYjI379sAeF6AL4DXh-owkEAMGWLZTvVlYPMGg28DD8Ll)
+![Impossible Foods web page young girl eating Impossible burger](5_improved_performance.png)
 
 ## Conclusion
 
@@ -99,11 +99,11 @@ Ultimately, Geo credits Impossible Foods' choice of technologies as the key that
 
 ## Still hungry for more?
 
-Check out this [webinar with Gatsby and Contentful](https://www.gatsbyjs.com/impossible-foods-webinar/) to hear Ashley Geo (Head of Brand Marketing-Communications at Impossible Foods) and David Fonnegra (Lead Technologist at Matter Supply) talk about delivering new features and content on impossiblefoods.com within often-impossible timeframes—and how they empowered the Impossible™ Digital team to increase customer engagement by more than 40%. Gatsby co-founder Kyle Mathews and Jim Ambras, Senior Technical Trainer at Contentful, join them.
+Check out this [webinar with Gatsby and Contentful](/impossible-foods-webinar/) to hear Ashley Geo (Head of Brand Marketing-Communications at Impossible Foods) and David Fonnegra (Lead Technologist at Matter Supply) talk about delivering new features and content on impossiblefoods.com within often-impossible timeframes—and how they empowered the Impossible™ Digital team to increase customer engagement by more than 40%. Gatsby co-founder Kyle Mathews and Jim Ambras, Senior Technical Trainer at Contentful, join them.
 
 <CloudCallout>
   Sites built with Gatsby are fast no matter where they run. But when a Gatsby
   site runs on Gatsby Cloud, its builds get even faster!
 </CloudCallout>
 
-Ashley Geo and David Fonnegra also highlighted the Impossible Foods / Matter Supply partnership in [ImpossibleFoods.com: Combining Gatsby + Contentful for Speed, Scale, and Flexibility](https://www.gatsbyjs.com/impossible-foods-webinar/). Deane Barker highlighted the store locator use-case [in a March 2019 podcast](https://www.ingeniux.com/company/podcast/content-matters-podcast-headless-content-management-with-deane-barker).
+Deane Barker highlighted the store locator use-case [in a March 2019 podcast](https://www.ingeniux.com/company/podcast/content-matters-podcast-headless-content-management-with-deane-barker).
