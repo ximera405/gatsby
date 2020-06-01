@@ -21,11 +21,11 @@ This meant that users had to scan a long and ever-growing list of retailers and 
 
 "Our product would be in certain places, and people wouldn't know it was there," explains Ashley Geo, Head of Brand Marketing Communications for Impossible Foods. Alternatively, she adds, "It wouldn't be in other places, but people would guess that it was there" - only to leave empty-handed and disappointed.
 
-![Original static list of Impossible Burger retail locations](original_list.gif)
+![Original static list of Impossible Burger retail locations](1_original_list.gif)
 
 Initially the team only had one person to oversee the website. They handled requests from all over the company --- recruiting, sales, other parts of marketing --- for adding new information to the website. Any actual site updates for design, copy or code were handled by a contractor. This required significant turnaround time, so updates often accumulated in a backlog.
 
-Geo had been thinking about a website redesign for a while anyway. The store locator problem was the final straw. As a result, her team decided to create a new website -- ImpossibleFoods.com 2.0 -- that would be easy to update, scale to the needs of the company, and provide users with a key experience lacking in the old site: easily finding the nearest Impossible Burger. ![Impossible Burger web page reading Find Me Bite Me](find_store_image.png)
+Geo had been thinking about a website redesign for a while anyway. The store locator problem was the final straw. As a result, her team decided to create a new website -- ImpossibleFoods.com 2.0 -- that would be easy to update, scale to the needs of the company, and provide users with a key experience lacking in the old site: easily finding the nearest Impossible Burger. ![Impossible Burger web page reading Find Me Bite Me](2_find_store_image.png)
 
 ## A New Store Locator: The Discovery Phase
 
@@ -45,13 +45,13 @@ That meant building a rich application, with a whole host of technologies, i.e.,
 
 ## A New Content Workflow
 
-The content management strategy is particularly interesting. Overall it's a great demonstration of the [content mesh](/blog/2018-10-04-journey-to-the-content-mesh/) - a modular approach to constructing websites using best-fit services rather than a monolithic, one-size-fits-none CMS solution. So while Impossible Foods website content is stored in and managed from Contentful, product location data is stored and managed via Airtable's spreadsheet/database hybrid. This simplify workflow for Impossible customer service representatives (CSRs) maintaining the locator app, while enabling the marketing team to easily create and update other content.
+The content management strategy is particularly interesting. Overall it's a great demonstration of the [content mesh](blog/2018-10-04-journey-to-the-content-mesh/) - a modular approach to constructing websites using best-fit services rather than a monolithic, one-size-fits-none CMS solution. So while Impossible Foods website content is stored in and managed from Contentful, product location data is stored and managed via Airtable's spreadsheet/database hybrid. This simplify workflow for Impossible customer service representatives (CSRs) maintaining the locator app, while enabling the marketing team to easily create and update other content.
 
 "Content-wise, a store locator is very simple," says CMS guru Deane Barker, the author of the O'Reilly guide to content management. "It's tabular data, which means it can be easily managed via a spreadsheet through rows and columns. To manage the store locator, you often have a different group of people than the marketing editorial team. So, it needs to be a simple interface. You don't want to train them on a larger CMS. They just have to maintain the store locator."
 
 The store locator is a use-case, Barker concludes, that calls for more "simple and direct content management."
 
-That squares with Fonnegra and Impossible's experience. The Impossible Foods' customer service representatives use Airtable for a wide variety of operational tasks, including tracking new launches of the Impossible Burger. And, of course, for the store locator, tracking information for all restaurants selling Impossible products. Airtable is the center of the CSRs workflow, and the [native integration with Gatsby](/packages/gatsby-source-airtable/?=gatsby-source) allows them to work in the system they're used to---while enjoying the blazing fast mechanics of a modern website working smoothly in the background.
+That squares with Fonnegra and Impossible's experience. The Impossible Foods' customer service representatives use Airtable for a wide variety of operational tasks, including tracking new launches of the Impossible Burger. And, of course, for the store locator, tracking information for all restaurants selling Impossible products. Airtable is the center of the CSRs workflow, and the [native integration with Gatsby](packages/gatsby-source-airtable/?=gatsby-source) allows them to work in the system they're used to---while enjoying the blazing fast mechanics of a modern website working smoothly in the background.
 
 As a result, Impossible Foods website content creators and CSRs get best fit tools that are comfortable to use, while end-users get information that is always up to date and relevant.
 
