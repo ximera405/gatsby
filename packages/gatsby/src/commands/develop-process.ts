@@ -466,6 +466,18 @@ module.exports = async (program: IDevelopArgs): Promise<void> => {
     graphqlTracing: program.graphqlTracing,
   })
 
+  {
+    // Write out files.
+    const activity = report.activityTimer(`write out requires`)
+    activity.start()
+    try {
+      await requiresWriter.writeAll(store.getState())
+    } catch (err) {
+      report.panic(`Failed to write out requires`, err)
+    }
+    activity.end()
+  }
+
   require(`../redux/actions`).boundActionCreators.setProgramStatus(
     `BOOTSTRAP_QUERY_RUNNING_FINISHED`
   )
