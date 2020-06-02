@@ -85,6 +85,7 @@ module.exports = async function build(program: IBuildArgs): Promise<void> {
   })
 
   await processStaticQueries()
+  await processPageQueries()
 
   await apiRunnerNode(`onPreBuild`, {
     graphql: bootstrapGraphQLRunner,
@@ -133,8 +134,6 @@ module.exports = async function build(program: IBuildArgs): Promise<void> {
 
     rewriteActivityTimer.end()
   }
-
-  await processPageQueries()
 
   if (process.env.GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES) {
     const { pages } = store.getState()
