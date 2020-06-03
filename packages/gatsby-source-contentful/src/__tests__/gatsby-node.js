@@ -7,6 +7,7 @@ jest.mock(`gatsby-core-utils`, () => {
   }
 })
 
+const _ = require(`lodash`)
 const gatsbyNode = require(`../gatsby-node`)
 const fetch = require(`../fetch`)
 const normalize = require(`../normalize`)
@@ -238,7 +239,9 @@ describe(`gatsby-node`, () => {
   it(`should create nodes from initial payload`, async () => {
     cache.get.mockClear()
     cache.set.mockClear()
-    fetch.mockImplementationOnce(() => startersBlogFixture.initialSync)
+    fetch.mockImplementationOnce(() =>
+      _.cloneDeep(startersBlogFixture.initialSync)
+    )
     const locales = [`en-US`, `nl`]
 
     await gatsbyNode.sourceNodes({
@@ -278,16 +281,14 @@ describe(`gatsby-node`, () => {
       startersBlogFixture.initialSync.currentSyncData
     )
     expect(cache.set.mock.calls.length).toBe(2)
-
-    // @todo check if references are set up correctly
   })
 
   it(`should add a new blogpost and update linkedNodes`, async () => {
     const locales = [`en-US`, `nl`]
 
     fetch
-      .mockReturnValueOnce(startersBlogFixture.initialSync)
-      .mockReturnValueOnce(startersBlogFixture.createBlogPost)
+      .mockReturnValueOnce(_.cloneDeep(startersBlogFixture.initialSync))
+      .mockReturnValueOnce(_.cloneDeep(startersBlogFixture.createBlogPost))
 
     const createdBlogEntry =
       startersBlogFixture.createBlogPost.currentSyncData.entries[0]
@@ -351,9 +352,9 @@ describe(`gatsby-node`, () => {
   it(`should update a blogpost`, async () => {
     const locales = [`en-US`, `nl`]
     fetch
-      .mockReturnValueOnce(startersBlogFixture.initialSync)
-      .mockReturnValueOnce(startersBlogFixture.createBlogPost)
-      .mockReturnValueOnce(startersBlogFixture.updateBlogPost)
+      .mockReturnValueOnce(_.cloneDeep(startersBlogFixture.initialSync))
+      .mockReturnValueOnce(_.cloneDeep(startersBlogFixture.createBlogPost))
+      .mockReturnValueOnce(_.cloneDeep(startersBlogFixture.updateBlogPost))
 
     const updatedBlogEntry =
       startersBlogFixture.updateBlogPost.currentSyncData.entries[0]
@@ -391,7 +392,7 @@ describe(`gatsby-node`, () => {
     })
 
     updatedBlogEntryIds.forEach(blogEntryId => {
-      expect(getNode(blogEntryId).title).toBe(`Hello world`)
+      expect(getNode(blogEntryId).title).toBe(`Hello world 1234`)
     })
 
     // updated blog post
@@ -430,9 +431,9 @@ describe(`gatsby-node`, () => {
   it(`should remove a blogpost and update linkedNodes`, async () => {
     const locales = [`en-US`, `nl`]
     fetch
-      .mockReturnValueOnce(startersBlogFixture.initialSync)
-      .mockReturnValueOnce(startersBlogFixture.createBlogPost)
-      .mockReturnValueOnce(startersBlogFixture.removeBlogPost)
+      .mockReturnValueOnce(_.cloneDeep(startersBlogFixture.initialSync))
+      .mockReturnValueOnce(_.cloneDeep(startersBlogFixture.createBlogPost))
+      .mockReturnValueOnce(_.cloneDeep(startersBlogFixture.removeBlogPost))
 
     const removedBlogEntry =
       startersBlogFixture.removeBlogPost.currentSyncData.deletedEntries[0]
